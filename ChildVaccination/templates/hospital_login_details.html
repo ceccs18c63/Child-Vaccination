@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Patient Details</title>
+    <style>
+        .welcome{
+            position:absolute;
+            top:10px;
+            right:300px;
+        }
+        table{
+            border-collapse: collapse;
+            width:100%;
+        }
+        th,td{
+            text-align:left;
+            padding:8px;
+            border-bottom:1px solid #ddd;
+        }
+        tr:nth-child(even){
+            background-color:#f2f2f2;
+        }
+    </style>
+</head>
+<body>
+<br>
+<center><b><font size="20">Child Vaccination App</font></b></center>
+<div class="welcome">
+    Welcome
+</div>
+<h1>Patient Details</h1>
+<table>
+    <tr>
+        <td><strong>Name of Hospital:</strong></td>
+        <td id="hosp-name"></td>
+    </tr>
+    <tr>
+        <td><strong>Address:</strong></td>
+        <td id="hosp-address"></td>
+    </tr>
+    <tr>
+        <td><strong>Phone:</strong></td>
+        <td id="hosp-phone"></td>
+    </tr>
+    <tr>
+        <td><strong>Medical History:</strong></td>
+        <td id="hosp-medical-history"></td>
+    </tr>
+    <tr>
+        <td><strong>Appointments:</strong></td>
+        <td id="hosp-appointments"></td>
+    </tr>
+</table>
+<script>
+    fetch('https://example.com/api/patient-details')
+        .then(response => response.json())
+        .then(data => {1
+            document.getElementById('hosp-name').textContent = data.name;
+            document.getElementById('hosp-address').textContent = data.address;
+            document.getElementById('hosp-phone').textContent = data.phone;
+            document.getElementById('hosp-medical-history').textContent = data.medicalHistory;
+            document.getElementById('hosp-appointments').textContent = data.lastAppointment;
+        })
+        .catch(error => {
+            console.error('Error fetching patient details:',error);
+        })
+</script>
+</body>
+</html>

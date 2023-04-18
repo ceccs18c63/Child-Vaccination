@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="{% static 'css/loginpage.css'%}" rel="stylesheet">
+    <style>
+        .button{
+            position:absolute;
+            bottom:85px;
+            left:120px;
+        }
+        .login_css{
+            position:absolute;
+            top:50px;
+            left:85px;
+            color:#622569;
+        }
+        .patient{
+            position:absolute;
+            top:130px;
+            left:40px;
+            font-weight:bold;
+        }
+        .last{
+            position:absolute;
+            top:450px;
+            left:80px;
+            color:red;
+        }
+        .input-box1{
+            position:absolute;
+            top:0px;
+            left:128px;
+        }
+        .input-box2{
+            position:absolute;
+            top:50px;
+            left:128px;
+        }
+        .input-box3{
+            position:absolute;
+            top:88px;
+            left:128px;
+        }
+        .input-box4{
+            position:absolute;
+            top:125px;
+            left:128px;
+        }
+        .input-box5{
+            position:absolute;
+            top:165px;
+            left:128px;
+        }
+        .input-box6{
+            position:absolute;
+            top:241px;
+            left:128px;
+        }
+        .input-box7{
+            position:absolute;
+            top:276px;
+            left:128px;
+        }
+        .input-box8{
+            position:absolute;
+            top:202px;
+            left:128px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+  <div class="screen">
+    <div class="screen__content">
+      <div class="login_css"><h2>Patient Sign Up</h2></div>
+      <div class="patient">
+        <form action="5" method="post">
+          Username:<div class="input-box1"><input type="text"></div><br>
+          <h6>Required only letters and digits and @/./+/-/_ only.</h6><br>
+          First Name:<div class="input-box2"><input type="text"></div><br><br>
+          Last Name:<div class="input-box3"><input type="text"></div><br><br>
+          Age:<div class="input-box4"><input type="email"></div><br><br>
+          Gender:<div class="input-box5"><input type="radio" name="gender">Male&nbsp&nbsp&nbsp&nbsp<input type="radio" name="gender">Female</div><br><br>
+          Phone:<div class="input-box8"><input type="number"></div><br><br>
+          Address:<div class="input-box6"><input type="text"></div><br><br>
+          Password:<div class="input-box7"><input type="password"></div>
+          <h6>Your Password can't be completely numeric and should contain minimum 8 characters and should not be similar to your personal info.</h6>
+        </form>
+      </div>
+      <div class="button">
+        <input type="submit" value="Register" style="height:36px;width:100px;">
+      </div>
+    </div>
+    <div class="screen__background">
+      <span class="screen__background__shape screen__background__shape4"></span>
+      <span class="screen__background__shape screen__background__shape3"></span>
+      <span class="screen__background__shape screen__background__shape2"></span>
+      <span class="screen__background__shape screen__background__shape1"></span>
+    </div>
+  </div>
+</div>
+</body>
+</html>
